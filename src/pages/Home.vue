@@ -1,8 +1,7 @@
 <template>
   <div class="home container-fluid" id="home">
     <h1 class="my-5">Dragons <img alt="Vue logo" src="../assets/logo.png" height="30rem">s Champions</h1>
-    <router-link to="/game"><button v-if="activeChampion && activeDragon">Start</button></router-link>
-    <div class="row">
+    <button @click="startGame" v-if="activeChampion && activeDragon">Start</button>
       <div class="col-6"> 
         <div class="row">
           <dragon-component v-for="dragon in dragons" :key="dragon._id" :dragonData="dragon"/>
@@ -14,7 +13,6 @@
         </div>
       </div>
     </div>
-  </div>
 </template>
 
 <script>
@@ -46,6 +44,11 @@ export default {
   activeDragon() {
     return this.$store.state.activeDragon
   }
+  },
+  methods: {
+    startGame(){
+      this.$store.dispatch("startGame", {dragon: this.activeDragon._id, champion: this.activeChampion._id})
+    }
   }
 
 }

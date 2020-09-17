@@ -1,6 +1,9 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+// @ts-ignore
 import Home from '../pages/Home.vue'
+// @ts-ignore
+import Game from '../pages/Game.vue'
 
 Vue.use(VueRouter)
 
@@ -11,14 +14,9 @@ const routes = [
     component: Home
   },
   {
-    path: '/game',
+    path: '/game/:id' ,
     name: 'Game',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: function () {
-      return import(/* webpackChunkName: "about" */ '../pages/Game.vue')
-    }
+    component: Game
   }
 ]
 
