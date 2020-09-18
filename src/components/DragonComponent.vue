@@ -30,6 +30,7 @@ export default {
 <style scoped>
 .card:active{
   transform: translateY(2px);
+  outline: 3px solid red;
   }
 .card{
   min-width: 11rem;

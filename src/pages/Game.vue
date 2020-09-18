@@ -4,7 +4,7 @@
       <div class="col-12">
         <h1 class="my-3 text-warning">BATTLE</h1>
       </div>
-      <div class="col-6 d-flex justify-content-center">
+      <div class="col-6 d-flex justify-content-center my-3">
         <div v-if="game.dragonHp > 0">
         <div class="card">
           <div class="card-body">
@@ -20,7 +20,7 @@
         </div>
       </div>
 
-      <div class="col-6 d-flex justify-content-center">
+      <div class="col-6 d-flex justify-content-center my-3">
         <div v-if="game.championHp > 0">
           <div class="card">
             <div class="card-body">
@@ -77,7 +77,7 @@ export default {
 }
 
 .card{
-  max-width: 30rem;
+  max-width: 27rem;
 }
 
 </style>
