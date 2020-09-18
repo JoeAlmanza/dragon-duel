@@ -4,7 +4,7 @@
     <button class="btn btn-danger" @click="startGame" v-if="activeChampion && activeDragon">FIGHT</button>
       <div class="row">
         <div class="col-6"> 
-          <div class="row justify-content-center">  
+          <div class="row justify-content-around">  
             <div class="col-12">
             <h2 class="my-3 text-warning"><u>Dragons</u></h2>
             </div>
@@ -12,7 +12,7 @@
           </div>
         </div>
         <div class="col-6">
-          <div class="row justify-content-center">
+          <div class="row justify-content-around">
             <div class="col-12">
             <h2 class="my-3 text-warning"><u>Champions</u></h2>
             </div>

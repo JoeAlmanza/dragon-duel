@@ -29,8 +29,12 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style>
+<style scoped>
 .card:active{
   transform: translateY(2px);
   }
+.card{
+  min-width: 11rem;
+}
+
 </style>
