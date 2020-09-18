@@ -1,5 +1,5 @@
 <template>
-  <div class="card col-3" @click="setActive">
+  <div class="card col-3 p-2 m-1 bg-primary text-warning" @click="setActive">
     <img class="card-img-top" :src="championData.imgUrl" alt="">
     <div class="card-body">
       <h4 class="card-title">{{championData.name}}</h4>
@@ -29,6 +29,8 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-
+<style>
+.card:active{
+  transform: translateY(2px);
+  }
 </style>

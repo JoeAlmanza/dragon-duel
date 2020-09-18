@@ -61,5 +61,7 @@ export default {
 
 
 <style scoped>
-
+#game{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
 </style>

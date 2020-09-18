@@ -8,9 +8,9 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     champions: [],
-    activeChampion: {},
+    activeChampion: null,
     dragons: [],
-    activeDragon: {},
+    activeDragon: null,
     game: {}
   },
 

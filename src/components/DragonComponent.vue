@@ -1,5 +1,5 @@
 <template>
-  <div class="card col-3" @click="setActive">
+  <div class="card col-3 p-2 m-1 bg-danger text-warning" @click="setActive">
     <img class="card-img-top" :src="dragonData.imgUrl" alt="">
     <div class="card-body">
       <h4 class="card-title">{{dragonData.name}}</h4>

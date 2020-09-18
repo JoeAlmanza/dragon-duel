@@ -1,15 +1,23 @@
 <template>
   <div class="home container-fluid" id="home">
-    <h1 class="my-5">Dragons <img alt="Vue logo" src="../assets/logo.png" height="30rem">s Champions</h1>
-    <button @click="startGame" v-if="activeChampion && activeDragon">Start</button>
-      <div class="col-6"> 
-        <div class="row">
-          <dragon-component v-for="dragon in dragons" :key="dragon._id" :dragonData="dragon"/>
+    <h1 class="my-5 text-info">Dragons <img alt="Vue logo" src="../assets/logo.png" height="30rem">s Champions</h1>
+    <button class="btn btn-danger" @click="startGame" v-if="activeChampion && activeDragon">FIGHT</button>
+      <div class="row">
+        <div class="col-6"> 
+          <div class="row justify-content-center">  
+            <div class="col-12">
+            <h2 class="my-3 text-warning"><u>Dragons</u></h2>
+            </div>
+            <dragon-component v-for="dragon in dragons" :key="dragon._id" :dragonData="dragon"/>
+          </div>
         </div>
-      </div>
-      <div class="col-6">
-        <div class="row">
-          <champion-component v-for="champion in champions" :key="champion._id" :championData="champion" />
+        <div class="col-6">
+          <div class="row justify-content-center">
+            <div class="col-12">
+            <h2 class="my-3 text-warning"><u>Champions</u></h2>
+            </div>
+           <champion-component v-for="champion in champions" :key="champion._id" :championData="champion" />
+          </div>
         </div>
       </div>
     </div>
@@ -53,3 +61,8 @@ export default {
 
 }
 </script>
+<style scoped>
+#home{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+</style>
